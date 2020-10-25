@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3.출력문
+    스크립트 태그 안에 존재하지만 (html 태그처럼) 구현되는 것
+    1)alert();
+    2)console.log();
+    3)document.write(); -->
+
+    <input type="text" id="n" value="Hello world">
+    <button onclick="alert('hi')" id="a">hello</button>
+    <div id="b">아이디</div>
+    <div class="c">클래스</div>
+    <div class="c">클래스</div>
+    <div class="c">클래스</div>
+    <h1></h1>
+    <h2></h2>
+
+    <!-- 배열 : index 0,1,2,3,4 = [0] -->
+
+    <script>
+        // alert();
+        // console.log();
+        // document.write();
+
+        //덮어씌움 : query / get
+        //카멜기법 : 낙타등 (네이밍:소대소대소)
+        document.querySelector('button').innerText = "hi";
+        document.querySelector('div').innerText = "id와 class";
+        document.querySelector('input').value = "input";
+        document.querySelector('#a').innerText = "id a";
+        document.querySelector('#b').innerText = "id b";
+        document.querySelector('.c').innerText = "class c";
+        
+        document.getElementById("n").innerHTML = "아이디가 n";
+        document.getElementById("a").innerHTML = "아이디가 a";
+        document.getElementById("b").innerHTML = "아이디가 b";
+        // document.getElementsByClassName("c").innerHTML = "클래스가 c"; //이렇게 쓰면 안된다
+        document.getElementsByClassName("c")[0].innerHTML = "클래스가 c";
+
+        // innerText 와 innerHTML 의 차이
+        document.querySelector('h1').innerText = "<h3>태그</h3>";
+        document.querySelector('h2').innerHTML = "<h3>태그</h3>";
+
+        var number; var num;
+        var string; var str;
+
+        var str ='곰돌이';
+        var str = 3;
+    </script>
+</body>
+</html>
